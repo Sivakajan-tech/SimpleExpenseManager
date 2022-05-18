@@ -36,4 +36,11 @@ public class ApplicationTest {
         boolean results = expenseManager.getAccountNumbersList().contains("190597R");
         Assert.assertTrue(results);
     }
+    
+    @Test
+    public void AddAccount2() {
+        expenseManager.addAccount("Test2-190597R", "Commercial", "S.Sivakajan", 20000.0);
+        boolean results = expenseManager.getAccountNumbersList().contains("Test2-190597R");
+        Assert.assertTrue(results);
+    }
 }
